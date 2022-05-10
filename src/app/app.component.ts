@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { PlaylistsActions } from "./store/actions/playlists.actions";
+import { Store } from "@ngrx/store";
+import { AppState } from "./store/state/app.state";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'playlists-app';
+  constructor(private _store: Store<AppState>) {
+    this._store.dispatch(PlaylistsActions.loadPlaylistsAction())
+  }
 }
