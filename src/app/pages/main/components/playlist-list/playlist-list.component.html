@@ -1,0 +1,8 @@
+<section class="playlist-list" *ngIf="playlistsState$ | async as playlistState">
+  <h1>{{playlistState.name}}</h1>
+
+  <div class="list">
+      <img *ngFor="let playlist of playlistState.playlists" [src]="playlist.artwork"
+           alt="Playlist artwork" (click)="showPlaylist(playlist)">
+  </div>
+</section>

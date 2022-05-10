@@ -1,6 +1,6 @@
 export interface PlaylistModel {
   id: string;
-  king: string;
+  kind: string;
   name: string;
   url: string;
   curator_name: string;

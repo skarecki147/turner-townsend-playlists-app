@@ -1,3 +1,16 @@
-<div *ngIf="playlist$ | async as playlist">
-  Selected playlist name: <b>{{playlist.name}}</b>
-</div>
+<section class="playlist" *ngIf="playlist$ | async as playlist">
+  <mat-card class="playlist-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{playlist.name}}</mat-card-title>
+      <mat-card-subtitle>{{playlist.curator_name}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <img [src]="playlist.artwork" alt="Playlist artwork">
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" (click)="goToPlaylist(playlist.url)">Go to PLAYLIST</button>
+      <button mat-raised-button color="warn" (click)="back()">Go BACK</button>
+    </mat-card-actions>
+  </mat-card>
+</section>

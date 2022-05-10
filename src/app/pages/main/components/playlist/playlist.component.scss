@@ -1,0 +1,23 @@
+section.playlist {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .playlist-card {
+    max-width: 555px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    mat-card-content {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    mat-card-actions {
+      text-align: center;
+    }
+  }
+}

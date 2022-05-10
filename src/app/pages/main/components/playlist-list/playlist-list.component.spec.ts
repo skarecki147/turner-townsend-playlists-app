@@ -1,13 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PlaylistComponent } from './playlist.component';
-import { RouterTestingModule } from "@angular/router/testing";
+import { PlaylistListComponent } from './playlist-list.component';
 import { provideMockStore } from "@ngrx/store/testing";
 import { PlaylistsState } from "../../../../store/state/playlists.state";
+import { RouterTestingModule } from "@angular/router/testing";
 
-describe('PlaylistComponent', () => {
-  let component: PlaylistComponent;
-  let fixture: ComponentFixture<PlaylistComponent>;
+describe('PlaylistListComponent', () => {
+  let component: PlaylistListComponent;
+  let fixture: ComponentFixture<PlaylistListComponent>;
 
   const initialState: PlaylistsState = {
     loading: false,
@@ -17,7 +17,7 @@ describe('PlaylistComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PlaylistComponent ],
+      declarations: [ PlaylistListComponent ],
       imports: [
         RouterTestingModule
       ],
@@ -29,7 +29,7 @@ describe('PlaylistComponent', () => {
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PlaylistComponent);
+    fixture = TestBed.createComponent(PlaylistListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

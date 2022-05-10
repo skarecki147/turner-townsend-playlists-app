@@ -1,13 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { map, Observable, tap } from "rxjs";
+import { map, Observable } from "rxjs";
 import { PlaylistResponseModel } from "../../shared/interfaces/playlist-response.model";
 import { PlaylistListModel } from "../../shared/interfaces/playlist-list.model";
 
-@Injectable({
-  providedIn: 'root'
-})
-// @Injectable()
+@Injectable()
 export class ApiService {
   private readonly _baseUrl: string;
 

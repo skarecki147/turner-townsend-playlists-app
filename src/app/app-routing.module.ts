@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'playlists',
+    path: '',
     loadChildren: () => import('./pages/main/main.module').then(m => m.MainModule)
   },
   {

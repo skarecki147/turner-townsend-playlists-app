@@ -1,5 +1,4 @@
-<h1>{{(playlists$ | async)?.name}}</h1>
-
-<div *ngFor="let playlist of (playlists$ | async)?.playlists">
-  <button mat-raised-button color="primary" style="margin: 5px" (click)="showPlaylist(playlist)">{{playlist.name}}</button>
-</div>
+<section class="main">
+  <h1>Welcome to Playlist App</h1>
+  <button mat-raised-button color="primary" (click)="show()">Show Featured Playlists</button>
+</section>

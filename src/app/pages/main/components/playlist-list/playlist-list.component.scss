@@ -1,0 +1,21 @@
+section.playlist-list {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 10vh 0;
+
+  .list {
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 45%;
+      height: auto;
+      padding: 16px;
+    }
+
+  }
+}

@@ -18,4 +18,11 @@ export class PlaylistComponent {
     this.playlist$ = this._store.select(selectPlaylistById(this._route.snapshot.params['id']))
   }
 
+  public back(): void {
+    this._router.navigate(['playlists'])
+  }
+
+  public goToPlaylist(playlistUrl: string): void {
+    window.open(playlistUrl, '_blank')
+  }
 }
